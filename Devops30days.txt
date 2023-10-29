@@ -1,5 +1,5 @@
 Class01- DevOps Terminology- Introduction to Devops[Initial defination], Design thinking and SDLC
-Class02- Agile WOW[BDD, TDD and FDD] With casestudy to save time
+Class02- Testing, CMMI and Agile WOW[BDD, TDD and FDD] With casestudy to save time
 Class03- DevOps Terminology- Developer vs Operation mindset, DevOps Principle[Culture]
 Class04- Deployment stategy and maven tool.
 Class05- Cloud Computing- Introduction and Self study roadmap
