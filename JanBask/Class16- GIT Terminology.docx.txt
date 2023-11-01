@@ -1,0 +1,15 @@
+Class16- GIT Terminology.docx
+Class17- GIT Core Concepts.docx
+
+Today's topic: Artifactory
+===========================
+It's a storage place where we would be storing artifact.
+
+Pending1: Sonarqube and quality gate
+Pending2: Jenkins setup
+Pending3: Dashboard navigating jenkins
+Pending4: CICD pipeline[Cloud, automation]
+pending5: Deep study about CICD pipeline
+Pending6: Devsecops
+
+It support all major programming language, and it's very easy to use.
