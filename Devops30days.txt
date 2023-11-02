@@ -1,10 +1,10 @@
 Class01- DevOps Terminology- Introduction to Devops[Initial defination], Design thinking and SDLC
 Class02- Testing, CMMI and Agile WOW[BDD, TDD and FDD] With casestudy to save time
-Class03- DevOps Terminology- Developer vs Operation mindset, DevOps Principle[Culture]
+Class03- DevOps Terminology- Developer vs Operation mindset, DevOps Principle[Culture] and SRE[Site Reliability Engineering]
 Class04- Deployment stategy and maven tool.
 Class05- Cloud native computing design and Cloud Computing- Introduction and Self study roadmap
-Class06- IAC- GoldenImage and Packer
-Class07- SRE[Site Reliability Engineering]
+Class06- Berief Introduction of traditional system and devops praposed solutions
+Class07- IAC- GoldenImage and Packer
 Class08- Containers- Docker architecture, Host Deployment and container deployment
 Class09- Containers- Dockerfile and it's instruction
 Class10- Containers- Docker cheatsheat
@@ -26,5 +26,5 @@ Class25- CICD- Artifactory management, Sonarqube and quality gate
 Class26- Monitoring[Monitoring fundamental- Splunk and ELK]
 Class27- Ansible[Configuration management, Playbook]
 Class28- DevSecOps[DevSecOps,OWASP10, Xray]
-Class29- DevOps Summary and DevOps eco-systems
-Class30- DevOps certifications and future roadmap
+Class29- DevOps Pipelines
+Class30- DevOps Summary and DevOps eco-systems, DevOps certifications and future roadmap
