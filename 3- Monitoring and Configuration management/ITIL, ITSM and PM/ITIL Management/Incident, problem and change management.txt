@@ -1,0 +1,9 @@
+Terminology?
+CI
+problem incident fix
+CAB
+TRM
+Dashboard incident
+problem-> New, Access, knownerror, resolved, closed
+score on problem.
+HOF
