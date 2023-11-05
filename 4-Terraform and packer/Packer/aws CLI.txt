@@ -1,0 +1,21 @@
+AWS CLI-
+
+What is access Key, and secrate key?
+Access Keys are used to sign the requests you send to Amazon S3. Like the Username/Password pair you use to access your AWS Management Console, Access Key Id and Secret Access Key are used for programmatic (API) access to AWS services. 
+
+How we can generate access and secrate key?
+Access Key- AKIA3QYLLWU47BWBVE5M 
+Secrate key-  QtLawuzGi4Z5c4BKmQfUEnhkcq1nmoeLsUkO6fLq
+
+[root@ip-172-31-32-231 aws]# aws s3 ls
+2020-03-11 03:51:15 umeshlbg
+
+
+Available commands are:
+    build       build image(s) from template
+    console     creates a console for testing variable interpolation
+    fix         fixes templates from old versions of packer
+    inspect     see components of a template
+    validate    check that a template is valid
+    version     Prints the Packer version
+
