@@ -1,0 +1,10 @@
+Jenkins download link
+=====================
+https://www.jenkins.io/download/
+
+
+Setup in docker
+===============
+docker run -idt -p 8080:8080 jenkins/jenkins
+docker exect -it <container name> /bin/bash
+cat ./var/jenkins_home/secrets/initialAdminPassword
