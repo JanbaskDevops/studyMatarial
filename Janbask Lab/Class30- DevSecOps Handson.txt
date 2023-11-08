@@ -10,7 +10,7 @@ Step2: apt-get update ; apt install jq
 Step3: curl -fsSL https://raw.githubusercontent.com/ZupIT/horusec/master/deployments/scripts/install.sh | bash -s latest
        horusec version
 
-Step3: horusec start -D -e="true" -p ./
+Step4: horusec start -D -e="true" -p ./
 
 2) DAST hands on
 ================
