@@ -1,78 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voting Application</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            margin: 50px;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        .options {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .option {
-            margin: 0 10px;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 1em;
-            cursor: pointer;
-        }
-
-        #result {
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S3 File Uploader</title>
 </head>
 <body>
-    <h1>Choose Best technology</h1>
-
-    <div class="options">
-        <div class="option">
-            <button onclick="vote('option1')">DevOps</button>
-        </div>
-        <div class="option">
-            <button onclick="vote('option2')">Cloud</button>
-        </div>
-        <div class="option">
-            <button onclick="vote('option3')">Others</button>
-        </div>
-    </div>
-
-    <div id="result"></div>
-
-    <script>
-        // Simple vote counting
-        let votes = {
-            option1: 0,
-            option2: 0,
-            option3: 0
-        };
-
-        function vote(option) {
-            votes[option]++;
-            displayResults();
-        }
-
-        function displayResults() {
-            const resultElement = document.getElementById('result');
-            resultElement.innerHTML = `<p>Results:</p>
-                <p>DevOps: ${votes.option1} votes</p>
-                <p>Cloud: ${votes.option2} votes</p>
-                <p>Others: ${votes.option3} votes</p>`;
-        }
-    </script>
+  <h1>S3 File Uploader</h1>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".txt, .pdf, .jpg, .png">
+    <button type="submit">Upload to S3</button>
+  </form>
 </body>
 </html>
