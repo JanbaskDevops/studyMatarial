@@ -1,0 +1,19 @@
+# Here we are setting up username and email when we are launching the linux terminal
+git config --global user.name "Patrick861"
+git config --global user.email "devopsguru959@gmail.com"
+
+# We are cloning the repository where we want to work
+git clone <repository name> 
+   After this one folder would be created with repository name
+   cd repostory_name
+   
+# Introduce our change
+vi file name 
+git add file name
+git commit -m "commit message"
+
+# Pushing containt to main
+git branch -M main
+git remote add origin https://github.com/Patrick861/Pr_second.git
+git remote set-url origin https://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@github.com/Patrick861/Pr_second.git
+git push -u origin main

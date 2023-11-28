@@ -1,0 +1,8 @@
+1. Take a ‘security first approach’
+2. Assess your organization’s readiness to utilize a microservices architecture
+3. Implement tracking and version control tools
+4. Commit daily, reduce branching
+5. Build only once
+6. Decide which processes and tests to automate first
+7. Release often
+8. Use on-demand testing environments

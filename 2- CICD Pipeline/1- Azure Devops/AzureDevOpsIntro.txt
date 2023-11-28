@@ -1,1 +1,0 @@
-Azure Devops Covers the entire application lifecyle, and enable devops capabilities

@@ -1,0 +1,42 @@
+git log
+=======
+commit 3a6127557dc05d9a6462fcea67d0f329e7286245 (HEAD -> main, origin/main, origin/HEAD)
+Author: bijomutta <bijomutta@gmail.com>
+Date:   Tue Jul 11 21:39:36 2023 +0200
+
+    Adding pet name validation on edit Pet
+
+commit 3be289517d320a47bb8f359acc1d1daf0829ed0b
+Author: bijomutta <bijomutta@gmail.com>
+Date:   Fri Jul 7 18:39:38 2023 +0200
+
+    Add birthdate validation
+
+commit b4efc934b2cfcdb3ca6ca2fde0adb40b99dbb19d
+Author: Dave Syer <dsyer@vmware.com>
+Date:   Fri Jul 7 10:42:01 2023 +0100
+
+    Docker-based integration tests don't work in native for now
+
+commit c231682c2d64aecb58cbcea6da59e3ac19b8c291
+Author: Dave Syer <dsyer@vmware.com>
+Date:   Fri Jul 7 10:25:30 2023 +0100
+
+    Tidy up native tests
+
+git log --oneline
+=================
+3a61275 (HEAD -> main, origin/main, origin/HEAD) Adding pet name validation on edit Pet
+3be2895 Add birthdate validation
+b4efc93 Docker-based integration tests don't work in native for now
+c231682 Tidy up native tests
+f85ad88 Add test dependencies to match Maven configuration
+029de90 Skip integration tests if docker unavailable
+ca2d8db Update VetController.java
+10e3dc9 Update to Spring Boot 3.1.1
+768e1ed Ensure enforcer plugin runs first
+3c1ef72 Test with test containers and docker compose
+cf6d44b Remove unnecessary autocrlf guidance
+0d9e882 Upgrade for Spring Boot 3.1 (#1253)
+2692c5b Update to Boot 3.0.6
+313121d Add comment about reproducible builds

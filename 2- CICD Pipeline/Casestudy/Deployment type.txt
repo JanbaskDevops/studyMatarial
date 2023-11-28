@@ -1,0 +1,5 @@
+1. Green-blue Deployment
+2. Canary Deployment
+3. Recreate
+4. Rolling update
+5. Manual deployment(EAR/WAR file deployment)

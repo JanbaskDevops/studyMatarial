@@ -1,0 +1,8 @@
+GIT uses SHA1 algorithm. so lets say we have one repository, and it has 5 branches, but all branches are having same code, GIT would be shaving it as once.
+
+juhi3@LAPTOP-KR8P2IGH MINGW64 ~/Desktop/Devops Engineering (main)
+$ git push -u origin main
+Enumerating objects: 118, done.
+Counting objects: 100% (118/118), done.
+Delta compression using up to 4 threads
+Compressing objects:  88% (103/117)
