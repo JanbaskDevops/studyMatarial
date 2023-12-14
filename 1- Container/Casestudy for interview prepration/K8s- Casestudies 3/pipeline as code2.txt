@@ -1,0 +1,98 @@
+Azure pipeline that do:
+
+1) create docker image
+2) push docker image to container registry
+3) create helm chart from image
+4) publish helm chart to repository
+5) create simulated environment
+6) deploy helm chart
+7) perform end to end testing
+8) Destroy the environment
+
+trigger:
+- '*'
+
+stages:
+- stage: BuildAndPush
+  jobs:
+  - job: BuildAndPush
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - checkout: self
+
+    # Step 1: Create Docker Image
+    - task: Docker@2
+      inputs:
+        command: 'build'
+        Dockerfile: '**/Dockerfile'
+        tags: '<registry-name>/<image-name>:$(Build.BuildId)'
+
+    # Step 2: Push Docker Image to Container Registry
+    - task: Docker@2
+      inputs:
+        command: 'push'
+        containerRegistry: '<azure-container-registry-connection>'
+        repository: '<registry-name>/<image-name>'
+        tags: '$(Build.BuildId)'
+
+- stage: HelmChart
+  jobs:
+  - job: HelmChart
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - checkout: self
+
+    # Step 3: Create Helm Chart from Docker Image
+    - script: |
+        cd helm
+        helm create <chart-name>
+        echo "image:
+          repository: <registry-name>/<image-name>
+          tag: $(Build.BuildId)" > <chart-name>/values.yaml
+
+    # Step 4: Publish Helm Chart to Repository
+    - task: HelmInstaller@1
+      inputs:
+        helmVersionToInstall: 'latest'
+      displayName: 'Install Helm'
+
+    - task: HelmDeploy@0
+      inputs:
+        command: 'package'
+        chartPath: 'helm/<chart-name>'
+        arguments: '--version $(Build.BuildId)'
+        chartName: '<chart-name>'
+        pushChart: true
+        pushChartArguments: '--version $(Build.BuildId)'
+
+- stage: DeployAndTest
+  jobs:
+  - job: DeployAndTest
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - checkout: self
+
+    # Step 5: Create Simulated Environment (e.g., use Helm or other tools)
+
+    # Step 6: Deploy Helm Chart
+    - script: |
+        cd helm
+        helm upgrade --install <release-name> ./<chart-name> --set key1=value1,key2=value2
+
+    # Step 7: Perform End-to-End Testing
+    - script: |
+        # Your end-to-end testing commands
+
+- stage: DestroyEnvironment
+  jobs:
+  - job: DestroyEnvironment
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - checkout: self
+
+    # Step 8: Destroy the Simulated Environment (e.g., use Helm or other tools)
+

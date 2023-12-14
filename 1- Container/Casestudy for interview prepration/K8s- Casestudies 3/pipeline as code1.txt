@@ -1,0 +1,38 @@
+trigger:
+- '*'
+
+pr:
+- '*'
+
+jobs:
+- job: Terraform
+  displayName: 'Terraform Apply'
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - checkout: self
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '3.x'
+  - script: |
+      cd terraform
+      terraform init
+      terraform apply -auto-approve
+    displayName: 'Terraform Apply'
+
+- job: HelmDeploy
+  displayName: 'Helm Deploy'
+  dependsOn: Terraform
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - checkout: self
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '3.x'
+  - script: |
+      cd helm
+      helm upgrade --install <release-name> ./<chart-directory> --set key1=value1,key2=value2
+    displayName: 'Helm Deploy'

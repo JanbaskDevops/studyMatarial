@@ -1,0 +1,26 @@
+provider "azurerm" {
+  features = {}
+}
+
+resource "azurerm_resource_group" "aks_rg" {
+  name     = "your-resource-group-name"
+  location = "your-region"
+}
+
+resource "azurerm_kubernetes_cluster" "aks_cluster" {
+  name                = "your-aks-cluster-name"
+  location            = azurerm_resource_group.aks_rg.location
+  resource_group_name = azurerm_resource_group.aks_rg.name
+  dns_prefix          = "your-dns-prefix"
+
+  default_node_pool {
+    name       = "default"
+    node_count = 1
+    vm_size    = "Standard_D2_v2"
+  }
+
+  service_principal {
+    client_id     = "your-service-principal-client-id"
+    client_secret = "your-service-principal-client-secret"
+  }
+}
